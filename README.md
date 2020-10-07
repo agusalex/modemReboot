@@ -11,6 +11,8 @@ Puppeteer container for rebooting a Technicolor CGA4233TCH3 modem (Fibertel)
  - Many thanks to https://gist.github.com/mbierman 's [post](https://gist.github.com/mbierman/5b3e671fa4e848eec899ff486d0cdc26)
   and https://stackoverflow.com/users/6870228/keith 
  - Feel free to make a PR to add your own modem's script
+ 
+By default will run example.js you can change that by setting SCRIPT parameter.
 
 # Environmental Variables
 | Variable |Description  |
@@ -18,7 +20,9 @@ Puppeteer container for rebooting a Technicolor CGA4233TCH3 modem (Fibertel)
 |**URL**  | Modem URL |
 |**USER**  | Modem USER |
 |**PASS**  | Modem Password |
-# Setup
+|**SCRIPT**  | Modem Model js Script |
+
+# Configuring it for your own modem model
 
 To debug with your particular modem first install nodeJs then install dependencies:
 
