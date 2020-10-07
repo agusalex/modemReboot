@@ -30,6 +30,13 @@ By default will run example.js you can change that by setting SCRIPT parameter.
 |**PASS**  | Modem Password |
 |**SCRIPT**  | Modem Model js Script |
 
+# Running
+If your modem is already supported, run this container  with these **ENV** options : 
+
+```docker run -it -e URL=URL -e USER=USER -e PASS=PASS -e SCRIPT=yourModem.js agusalex/modemReboot ```
+
+Otherwise see the next section
+
 # Configuring it for your own modem model
 
 To debug with your particular modem first install nodeJs then install dependencies:
@@ -39,10 +46,14 @@ To debug with your particular modem first install nodeJs then install dependenci
 And run it:
 ```node app.js```
 
-# Running
-Run this container  with these **ENV** options : 
+Finally when you have it ready, make a PR or create an Issue with your script and I will add it.
 
-```docker run -it -e URL=URL -e USER=USER -e PASS=PASS -e SCRIPT=example.js agusalex/modemReboot ```
+If you want to build your own docker container thats easy too:
+
+```docker build -t "myModemRebooter" .```
+
+```docker run -it -e URL=URL -e USER=USER -e PASS=PASS -e SCRIPT=yourModem.js myModemRebooter ```
+
 # Tips
 Open the developer tools in the browser, inspect element click it and get the ID then you can use it.
 
