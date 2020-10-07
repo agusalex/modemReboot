@@ -12,10 +12,13 @@ Puppeteer container for rebooting Modems
   and https://stackoverflow.com/users/6870228/keith 
  - Feel free to make a PR to add your own modem's script
  
-Modem List (set this as your script Env var):
-- Technicolor CGA4233TCH3 modem (Fibertel) -> example.js
-- Arris (Modem Undefined) -> arris.js
-- Movistar Mitrastar 2541GNAC -> Movistar_Mitrastar_2541GNAC.js
+# Modem List:
+Set this as your SCRIPT Env var
+| Modem | SCRIPT  |
+|--|--|
+|**Technicolor CGA4233TCH3 modem (Fibertel)**  | example.js |
+|**Arris (Modem Undefined)**  | arris.js |
+|**Mitrastar 2541GNA (Movistar)**  | Movistar_Mitrastar_2541GNAC.js |
  
 By default will run example.js you can change that by setting SCRIPT parameter.
 
@@ -39,7 +42,7 @@ And run it:
 # Running
 Run this container  with these **ENV** options : 
 
-```docker run -it -e URL=URL -e USER=USER PASS=PASS agusalex/modemReboot ```
+```docker run -it -e URL=URL -e USER=USER -e PASS=PASS -e SCRIPT=example.js agusalex/modemReboot ```
 # Tips
 Open the developer tools in the browser, inspect element click it and get the ID then you can use it.
 
