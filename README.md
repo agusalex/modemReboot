@@ -4,10 +4,13 @@
 
 [dockerhub-badge]: https://img.shields.io/badge/images%20on-Docker%20Hub-blue.svg
 [dockerhub-link]: https://hub.docker.com/repository/docker/agusalex/modem_reboot "Docker Hub Image"
-Reboot Fibertel Technicolor CGA4233TCH3 modem
 
-Default User and Password is **custadmin:cga4233**
-
+Puppeteer container for rebooting a Technicolor CGA4233TCH3 modem (Fibertel)
+ - The specific navigation for your modem will vary, 
+ - This is more of an example and isn't guaranteed to work for your particular modem.
+ - Many thanks to https://gist.github.com/mbierman 's [post](https://gist.github.com/mbierman/5b3e671fa4e848eec899ff486d0cdc26)
+  and https://stackoverflow.com/users/6870228/keith 
+ - Feel free to make a PR to add your own modem's script
 
 # Environmental Variables
 | Variable |Description  |
