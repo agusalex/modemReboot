@@ -5,12 +5,17 @@
 [dockerhub-badge]: https://img.shields.io/badge/images%20on-Docker%20Hub-blue.svg
 [dockerhub-link]: https://hub.docker.com/repository/docker/agusalex/modem_reboot "Docker Hub Image"
 
-Puppeteer container for rebooting a Technicolor CGA4233TCH3 modem (Fibertel)
+Puppeteer container for rebooting Modems
  - The specific navigation for your modem will vary, 
  - This is more of an example and isn't guaranteed to work for your particular modem.
  - Many thanks to https://github.com/mbierman 's [post](https://gist.github.com/mbierman/5b3e671fa4e848eec899ff486d0cdc26)
   and https://stackoverflow.com/users/6870228/keith 
  - Feel free to make a PR to add your own modem's script
+ 
+Modem List (set this as your script Env var):
+- Technicolor CGA4233TCH3 modem (Fibertel) -> example.js
+- Arris (Modem Undefined) -> arris.js
+- Movistar Mitrastar 2541GNAC -> Movistar_Mitrastar_2541GNAC.js
  
 By default will run example.js you can change that by setting SCRIPT parameter.
 
