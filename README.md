@@ -27,7 +27,7 @@ By default will run example.js you can change that by setting SCRIPT parameter.
 # Environmental Variables
 | Variable |Description  |
 |--|--|
-|**URL**  | Modem URL |
+|**URL**  | Modem URL (for example https://192.168.0.1/ ) |
 |**USER**  | Modem USER |
 |**PASS**  | Modem Password |
 |**SCRIPT**  | Modem Model js Script |
