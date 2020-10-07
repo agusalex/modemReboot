@@ -31,13 +31,13 @@ By default will run example.js you can change that by setting SCRIPT parameter.
 |**USER**  | Modem USER |
 |**PASS**  | Modem Password |
 |**SCRIPT**  | Modem Model js Script |
-|**CRON**  | Cron Schedule [Configure your Cron schedule here](https://crontab.guru/) |
+|**CRON**  | [Cron Schedule](https://crontab.guru/) |
 
 
 # Running
 If your modem is already supported, run this container  with these **ENV** options : 
 
-```docker run -it -e URL=URL -e USER=USER -e PASS=PASS -e SCRIPT=yourModem.js agusalex/modemReboot ```
+```docker run -it -e URL=URL -e USER=USER -e PASS=PASS -e SCRIPT=yourModem.js -e CRON="* * * * *" agusalex/modemReboot ```
 
 Otherwise see the next section
 
@@ -56,7 +56,7 @@ If you want to build your own docker container thats easy too:
 
 ```docker build -t "myModemRebooter" .```
 
-```docker run -it -e URL=URL -e USER=USER -e PASS=PASS -e SCRIPT=yourModem.js myModemRebooter ```
+```docker run -it -e URL=URL -e USER=USER -e PASS=PASS -e SCRIPT=yourModem.js -e CRON="* * * * *" myModemRebooter ```
 
 # Tips
 Open the developer tools in the browser, inspect element click it and get the ID then you can use it.
@@ -74,10 +74,4 @@ Then you can use it like so:
 
 More info in https://pptr.dev/
 # Future Work
-```
-FROM alpine:3.6 
-#copy crontabs for root user 
-COPY config/cronjobs /etc/crontabs/root 
-#start crond with log level 8 in foreground, output to stderr 
-CMD ["crond", "-f", "-d", "8"]
-```
+In order for this to be usefull we need as many Modem models scripts as possible, this cant be done without the help of others
