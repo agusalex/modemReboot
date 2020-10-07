@@ -4,7 +4,8 @@
 
 [dockerhub-badge]: https://img.shields.io/badge/images%20on-Docker%20Hub-blue.svg
 [dockerhub-link]: https://hub.docker.com/repository/docker/agusalex/modem_reboot "Docker Hub Image"
-Reboot Fibertel Technicolor modem
+Reboot Fibertel Technicolor CGA4233TCH3 modem
+
 
 # Environmental Variables
 | Variable |Description  |
