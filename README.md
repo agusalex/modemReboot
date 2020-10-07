@@ -28,3 +28,18 @@ And run it:
 Run this container  with these **ENV** options : 
 
 ```docker run -it -e URL=URL -e USER=USER PASS=PASS agusalex/modemReboot ```
+# Tips
+Open the developer tools in the browser, inspect element click it and get the ID then you can use it.
+
+For example login-button is the id of the button:
+
+``` const form = await page.$('#login-button');```
+   ``` await form.evaluate( form => form.click() ); ```
+   
+If the element does not have an ID, after inspecting it right click on the DOM of the element and select **Copy Selector**
+
+Then you can use it like so:
+
+``` cpage.click( "OUTPUT FROM COPY SELECTOR" )```
+
+More info in https://pptr.dev/
