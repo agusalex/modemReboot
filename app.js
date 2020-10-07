@@ -1,21 +1,24 @@
     /*
- * @name Reboot Arris modem. 
+ * Reboot Technicolor modem. 
  *
- * @desc Puppeteer script for rebooting an Arris modem. 
+ * Puppeteer container for rebooting an Technicolor modem. 
  * since the specific navigation for your modem will vary, this 
  * is more of an example and isn't guaranteed to work for your particular
  * modem. 
- * Many thanks to https://stackoverflow.com/users/6870228/keith for his help!
+ * Many thanks to https://gist.github.com/mbierman/5b3e671fa4e848eec899ff486d0cdc26
+  and https://stackoverflow.com/users/6870228/keith 
  *
  */
 
 const puppeteer = require('puppeteer');
 const date = require('date-and-time');
+const isDocker = require('is-docker');
 
-const USER = process.env.USER || "admin";
-const PASS = process.env.PASS || "admin";
-const URL = process.env.URL;
 
+const USER = process.env.USER || "custadmin";
+const PASS = process.env.PASS || "cga4233";
+const URL = process.env.URL || "URL";
+var browser;
 const delay = (ms) =>
 	new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -31,15 +34,19 @@ process.on("unhandledRejection", (reason, p) => {
 });
 
 (async() => {
-
+	if (isDocker()) {
+		console.log('Running inside a Docker container');
+		browser =await puppeteer.launch({
+			executablePath: '/usr/bin/chromium-browser',
+			args: ['--no-sandbox', '--headless', '--disable-gpu']
+			});
+	}
+	else{
+		browser = await puppeteer.launch({
+			headless: false
+		});
+	}
 	timeMe(1, 'Login...');
-	/*const browser = await puppeteer.launch({
-		headless: false
-	});*/
-	const browser =await puppeteer.launch({
-	executablePath: '/usr/bin/chromium-browser',
-	args: ['--no-sandbox', '--headless', '--disable-gpu']
-	});
 	
 	const page = await browser.newPage();
 	await page.setViewport({
