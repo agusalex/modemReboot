@@ -31,7 +31,7 @@ By default will run example.js you can change that by setting SCRIPT parameter.
 |**USER**  | Modem USER |
 |**PASS**  | Modem Password |
 |**SCRIPT**  | Modem Model js Script |
-|**CRON**  | Cron Schedule [Configure your Cron schedule here](https://crontab.guru/) |
+|**CRON**  | [Cron Schedule](https://crontab.guru/) |
 
 
 # Running
