@@ -11,6 +11,6 @@ if [ -z "$CRON" ]; then
 else
     echo "Crontab Present, Scheduling Reboot at $CRON";
     echo "The time now is $(date)";
-    echo "$CRON node /usr/src/app/$SCRIPT" >> /etc/crontabs/root;
+    echo "$CRON node /usr/src/app/$SCRIPT" > /etc/crontabs/root;
     crond -f -d 8;
 fi
