@@ -6,7 +6,7 @@
 [dockerhub-link]: https://hub.docker.com/repository/docker/agusalex/modem_reboot "Docker Hub Image"
 Reboot Fibertel Technicolor CGA4233TCH3 modem
 
-Default User and Password is custadmin:cga4233
+Default User and Password is **custadmin:cga4233**
 
 
 # Environmental Variables
