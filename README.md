@@ -8,7 +8,7 @@
 Puppeteer container for rebooting a Technicolor CGA4233TCH3 modem (Fibertel)
  - The specific navigation for your modem will vary, 
  - This is more of an example and isn't guaranteed to work for your particular modem.
- - Many thanks to https://gist.github.com/mbierman 's [post](https://gist.github.com/mbierman/5b3e671fa4e848eec899ff486d0cdc26)
+ - Many thanks to https://github.com/mbierman 's [post](https://gist.github.com/mbierman/5b3e671fa4e848eec899ff486d0cdc26)
   and https://stackoverflow.com/users/6870228/keith 
  - Feel free to make a PR to add your own modem's script
  
