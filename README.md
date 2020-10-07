@@ -17,7 +17,7 @@ Default User and Password is custadmin:cga4233
 |**PASS**  | Modem Password |
 # Setup
 
-- To debug with your particular modem first install nodeJs then install dependencies:
+To debug with your particular modem first install nodeJs then install dependencies:
 
 ```npm install puppeteer date-and-time is-docker  ```
 
@@ -25,6 +25,6 @@ And run it:
 ```node app.js```
 
 # Running
-- Run this container  with these **ENV** options : 
+Run this container  with these **ENV** options : 
 
 ```docker run -it -e URL=URL -e USER=USER PASS=PASS agusalex/modemReboot ```
