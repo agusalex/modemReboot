@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  rebooter:
+    image: agusalex/modem_reboot
+    container_name: rebooter
+    security_opt:
+    environment:
+      - URL=myModemsURL
+      - USER=yourModemUsername
+      - PASS=yourModemPassowrd
+      - SCRIPT=yourModemScript
+      - CRON=0 4 * * * #Every day at 4am
+    restart: unless-stopped
