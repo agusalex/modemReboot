@@ -68,7 +68,7 @@ process.on("unhandledRejection", (reason, p) => {
     });
     const form = await page.$('#login-button');
     await form.evaluate( form => form.click() );
-    await delay(1000);
+    await delay(4000);
 
 	timeMe(1, 'Go to reboots...');
     
@@ -83,10 +83,10 @@ process.on("unhandledRejection", (reason, p) => {
     timeMe(1, 'Waiting for dialog');
     await page.on("dialog", (dialog) => {
         timeMe(1, 'Dialog is up');
-        delay(1000);
+        delay(4000);
 		dialog.accept();
 		timeMe(1, "Accepted...");
-        delay(1000);
+        delay(4000);
     });
     timeMe(1, 'Pause...');
 	await delay(10000);
