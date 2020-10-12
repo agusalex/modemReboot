@@ -68,16 +68,16 @@ process.on("unhandledRejection", (reason, p) => {
     });
     const form = await page.$('#login-button');
     await form.evaluate( form => form.click() );
-    await delay(4000);
+    await delay(10000);
 
-	timeMe(1, 'Go to reboots...');
-    
+    timeMe(1, 'Go to reboots...');
+    await page.screenshot({path: 'screenshot_before.png'});
     await page.goto(URL+'/#/administration/reset', {
 		waitUntil: 'load',
-		timeout: 0
+		timeout: 20000
     });
+    await page.screenshot({path: 'screenshot_after.png'});	
     await delay(4000);
-  
     page.click( "#reset_content_container > div:nth-child(2) > div:nth-child(3) > div:nth-child(2) > button" )
    
     timeMe(1, 'Waiting for dialog');
