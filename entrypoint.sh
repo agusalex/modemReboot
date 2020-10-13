@@ -3,6 +3,7 @@ reboot(){
     echo "Reboot Started at $(date)";
     node $SCRIPT
 }
+rm -f /usr/src/app/*.png #delete old screenshots 
 echo "Starting Modem Rebooter..."
 if [ -z "$CRON" ]; then
     echo "Crontab Not Present:"
