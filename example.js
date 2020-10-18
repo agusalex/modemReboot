@@ -59,7 +59,7 @@ process.on("unhandledRejection", (reason, p) => {
 		waitUntil: 'load',
 		timeout: 0
     });;
-    await delay(2000);
+    await delay(10000);
 	await page.type('input#username', USER, {
 		delay: 30
 	});
