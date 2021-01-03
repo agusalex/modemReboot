@@ -78,7 +78,7 @@ process.on("unhandledRejection", (reason, p) => {
     });
     await page.screenshot({path: 'screenshot_after.png'});	
     await delay(4000);
-    page.click( "#reset_content_container > div:nth-child(2) > div:nth-child(3) > div:nth-child(2) > button" )
+    page.click( "#reset_content_container > div.table_only_data > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > button" )
    
     timeMe(1, 'Waiting for dialog');
     await page.on("dialog", (dialog) => {
