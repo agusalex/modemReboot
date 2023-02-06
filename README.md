@@ -21,6 +21,7 @@ Set this as your SCRIPT Env var
 |**Technicolor CGA4233TCH3 modem (Fibertel)**  | example.js |
 |**Arris (Modem Undefined)**  | arris.js |
 |**Mitrastar 2541GNA (Movistar)**  | Movistar_Mitrastar_2541GNAC.js |
+|**ZTE_MF258**| ZTE_MF258.js|
  
 By default will run example.js you can change that by setting SCRIPT parameter.
 
